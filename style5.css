@@ -1,0 +1,115 @@
+	
+	#contenedor {
+		width: 700px;
+		margin: 0 auto;
+	}
+	#nivel {
+		font-weight: 100;
+		font-size: medium;
+	}
+	#menu a {
+		text-decoration: none;
+		margin-left: 10px;
+		color: #808080;
+	}
+	#menu ul li {
+		display: inline;
+
+	}
+	#menu ul {
+		padding-left: 0px;
+	}
+	#about  ul{
+		list-style-type: none;
+		width: 500px;
+		float: left;
+		margin-top: 30px;
+		
+	}
+	#about  h2{
+		width: 150px;
+		float: left;
+	}
+	#experience h2{
+		width: 150px;
+		clear: both;
+		
+	}
+	#info1{
+		list-style-type: none;
+		width: 500px;
+	}
+	#info2{
+		list-style-type: none;
+		width: 500px;
+	}
+	#grupo1 {
+		width: 500px;
+		float: left;
+		margin-left: 150px;
+		margin-bottom: 20px;
+	}
+	#education h2{
+		width: 150px;
+		clear: both;
+
+	}
+	#education  ul{
+		list-style-type: none;
+		width: 500px;
+		float: left;
+		margin-left: 150px;
+		margin-bottom: 50px;
+	}
+	#projects h2{
+		width: 150px;
+		clear: both;
+	}
+	#projects  ul{
+		list-style-type: none;
+		width: 500px;
+		float: left;
+		margin-left: 150px;
+		margin-bottom: 50px;
+	}
+	#skills h2{
+		width: 150px;
+		clear: both;
+	}
+	#skills  ul{
+		list-style-type: none;
+		width: 500px;
+		float: left;
+		margin-left: 150px;
+		    margin-bottom: 50px;
+	}
+	#contact h2{
+		width: 150px;
+		clear: both;
+	}
+	#contact ul{
+		list-style-type: none;
+		width: 500px;
+		float: left;
+		margin-left: 150px;
+		    margin-bottom: 50px;
+	}
+	#contact a {
+		text-decoration: none;
+		color: #ff6600;
+	}
+	section > h2 {
+		color: #ff6600;
+	}
+	li[id= "g1"]{
+		font-weight: bold;
+	}
+	li[id= "g2"]{
+		color: #262626;
+	}
+	li[id= "g3"]{
+		color: #666666;
+	}
+	li[id= "g4"]{
+		color: #8c8c8c;
+	}
