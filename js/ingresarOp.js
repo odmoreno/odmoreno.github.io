@@ -21,6 +21,9 @@ $(document).ready(function() {
 			}
 		}
 		xhttp.open("GET","json/datosOperario.json", true);
-	xhttp.send();
+		xhttp.send();
+		
+		document.getElementById(id2show).style.visibility='visible';
+		
 	});
 });
