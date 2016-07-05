@@ -1,4 +1,4 @@
-function cargarDatos(){
+$(document).ready( function cargarDatos(){
 	var xhttp= new XMLHttpRequest();
 	console.log("hola");
 		xhttp.onreadystatechange = function(){
@@ -39,8 +39,8 @@ function cargarDatos(){
 		};
 	xhttp.open("GET","json/datosOP.json", true);
 	xhttp.send();
-}
-window.onload(cargarDatos());
+});
+
 /*
 <div class="dropdown">
 					<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Examenes
