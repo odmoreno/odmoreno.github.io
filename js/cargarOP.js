@@ -22,7 +22,7 @@ $(document).ready( function cargarDatos(){
 					
 					
 					var examenes=dato.examenes
-					td4.innerHTML="<div class=\"dropdown\"><button class=\"btn btn-default dropdown-toggle\" type=\"button\" data-toggle=\"dropdown\">Examenes <span class=\"caret\"></span></button><ul class=\"dropdown-menu\">"
+					
 					var dd=document.createElement("ul");
 					dd.className="dropdown-menu"
 					examenes.forEach(function(examen){
@@ -35,7 +35,8 @@ $(document).ready( function cargarDatos(){
 						
 					});
 					/*td4.textContent=dato.examenes;*/
-					//td4.appendChild(dd);
+					td4.innerHTML="<div class=\"dropdown\"><button class=\"btn btn-default dropdown-toggle\" type=\"button\" data-toggle=\"dropdown\">Examenes <span class=\"caret\"></span></button><ul class=\"dropdown-menu\">"
+					td4.appendChild(dd);
 					td5.textContent=dato.lab;
 				
 					tr.appendChild(td1);
