@@ -26,7 +26,7 @@ $(document).ready(function() {
 		document.getElementById(id2show).style.visibility='visible';
 		
 	});
-	 $('#opcion3 a').click(function(event) {
+	$('#opcion3 a').click(function(event) {
 		$('#datosOperario').load('estadisticas.html');
 		var circle = d3.selectAll("circle")
 		var contHeces=0;
