@@ -19,9 +19,18 @@ $(document).ready( function cargarDatos(){
 					td1.textContent=dato.numero;
 					td2.textContent=dato.paciente;
 					td3.textContent=dato.centro;
-					/*
-					td4.textContent=dato.examenes;
-					*/
+					
+					
+					var examenes=dato.examenes
+					td4.innerHTML="<div class=\"dropdown\"><button class=\"btn btn-default dropdown-toggle\" type=\"button\" data-toggle=\"dropdown\">Examenes <span class=\"caret\"></span></button><ul class=\"dropdown-menu\">"
+					
+					examenes.forEach(function(examen){
+						var li= document.createElement("li");
+						li.textContent=examen
+						td4.appendChild(li);
+					});
+					/*td4.textContent=dato.examenes;*/
+					td4.appendChild("</ul></div>")
 					td5.textContent=dato.lab;
 				
 					tr.appendChild(td1);
