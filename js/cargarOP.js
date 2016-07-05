@@ -30,7 +30,7 @@ $(document).ready( function cargarDatos(){
 						td4.appendChild(li);
 					});
 					/*td4.textContent=dato.examenes;*/
-					td4.appendChild("</ul></div>")
+					td4.innerHTML=td4.innerHTML + "</ul></div>"
 					td5.textContent=dato.lab;
 				
 					tr.appendChild(td1);
