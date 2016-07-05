@@ -9,7 +9,7 @@ $(document).ready( function cargarDatos(){
 				var json = JSON.parse(xhttp.responseText);
 				
 				json.forEach(function(dato){
-					console.log(auto);
+					console.log(dato);
 					var tr= document.createElement("tr");
 					var td1= document.createElement("td");
 					var td2= document.createElement("td");
