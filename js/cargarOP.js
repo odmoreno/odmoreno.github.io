@@ -27,7 +27,10 @@ $(document).ready( function cargarDatos(){
 					dd.className="dropdown-menu"
 					examenes.forEach(function(examen){
 						var li= document.createElement("li");
-						li.textContent=examen
+						var a=document.createElement("a");
+						a.href="#";
+						a.textContent=examen;
+						li.appendChild(a);
 						dd.appendChild(li);
 					});
 					/*td4.textContent=dato.examenes;*/
