@@ -16,8 +16,8 @@ function validarLogin(){
 
 	if( email == emailvalido && password == passvalida){
 		console.log("cuenta  valida");
-		$(document).load('paciente.html');
-		//window.open('paciente.html');
+		//$(document).load('paciente.html');
+		window.open('paciente.html');
 		//$('.container').load('paciente.html');
 
 	}
