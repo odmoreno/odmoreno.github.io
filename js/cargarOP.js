@@ -37,10 +37,10 @@ function cargarDatos(){
 				
 			}
 		};
-		xhttp.open("GET","json/datosOP.json", true);
-		xhttp.send();
+	xhttp.open("GET","json/datosOP.json", true);
+	xhttp.send();
 }
-window.onload(cargarDatos);
+window.onload(cargarDatos());
 /*
 <div class="dropdown">
 					<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Examenes
