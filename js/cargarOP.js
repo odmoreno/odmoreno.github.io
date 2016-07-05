@@ -23,14 +23,15 @@ $(document).ready( function cargarDatos(){
 					
 					var examenes=dato.examenes
 					td4.innerHTML="<div class=\"dropdown\"><button class=\"btn btn-default dropdown-toggle\" type=\"button\" data-toggle=\"dropdown\">Examenes <span class=\"caret\"></span></button><ul class=\"dropdown-menu\">"
-					
+					var dd=createElement("ul")
+					dd.className="dropdown-menu"
 					examenes.forEach(function(examen){
 						var li= document.createElement("li");
 						li.textContent=examen
-						td4.appendChild(li);
+						dd.appendChild(li);
 					});
 					/*td4.textContent=dato.examenes;*/
-					td4.innerHTML=td4.innerHTML + "</ul></div>"
+					td4.appendChild(dd);
 					td5.textContent=dato.lab;
 				
 					tr.appendChild(td1);
