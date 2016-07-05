@@ -7,12 +7,11 @@ alert.warning = function(message){
 }
 
 function validarLogin(){
-	$("#ingresoSesion").effect("shake");
-	console.log("hola");
+	
 	var email = $('#inputEmail').val();
-	console.log(email);
+
 	var password = $('#inputPassword').val();
-	console.log(password);
+
 
 	if( email == emailvalido && password == passvalida){
 		console.log("cuenta  valida");
