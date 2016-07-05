@@ -15,7 +15,7 @@ $(document).ready(function() {
 				json.forEach(function(dato){
 					var option= document.createElement("option");
 					var numMuestra=dato.numero;
-					option.textContent(numMuestra);
+					option.textContent=numMuestra
 					muestras.appendChild(option);
 				});
 			}
