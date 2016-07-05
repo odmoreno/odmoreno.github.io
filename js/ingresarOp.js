@@ -29,13 +29,14 @@ $(document).ready(function() {
 	 $('#opcion3 a').click(function(event) {
 		$('#datosOperario').load('estadisticas.html');
 		var circle = d3.selectAll("circle")
+		var contHeces=0;
+		var contSangre=0;
+		var contHepa=0;
+		var contOrin=0;
 		var xhttp= new XMLHttpRequest();
 		xhttp.onreadystatechange = function(){
 			if (xhttp.readyState == 4 && xhttp.status == 200){
-				var contHeces=0;
-				var contSangre=0;
-				var contHepa=0;
-				var contOrin=0;
+				
 				var json = JSON.parse(xhttp.responseText);
 				json.forEach(function(dato){
 					var examenes=dato.examenes;
