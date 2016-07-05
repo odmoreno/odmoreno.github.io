@@ -32,9 +32,10 @@ $(document).ready( function cargarDatos(){
 						a.textContent=examen;
 						li.appendChild(a);
 						dd.appendChild(li);
+						
 					});
 					/*td4.textContent=dato.examenes;*/
-					td4.appendChild(dd);
+					//td4.appendChild(dd);
 					td5.textContent=dato.lab;
 				
 					tr.appendChild(td1);
