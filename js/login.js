@@ -18,6 +18,7 @@ function validarLogin(){
 		console.log("cuenta  valida");
 		//$(document).load('paciente.html');
 		window.open('paciente.html');
+		//
 		//$('.container').load('paciente.html');
 
 	}
