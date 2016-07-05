@@ -9,14 +9,12 @@ $(document).ready( function cargarDatos(){
 				var json = JSON.parse(xhttp.responseText);
 				
 				json.forEach(function(dato){
-					
 					var tr= document.createElement("tr");
 					var td1= document.createElement("td");
 					var td2= document.createElement("td");
 					var td3= document.createElement("td");
 					var td4= document.createElement("td");
 					var td5= document.createElement("td");
-					
 					
 					td1.textContent=dato.numero;
 					td2.textContent=dato.paciente;
@@ -37,19 +35,17 @@ $(document).ready( function cargarDatos(){
 				
 			}
 		};
-	
 	xhttp.open("GET","json/datosOperario.json", true);
 	xhttp.send();
 });
 
 /*
-<div class="dropdown">
-					<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Examenes
-						<span class="caret"></span></button>
-						<ul class="dropdown-menu">
-							<li><a href="#">Sangre</a></li>
-							<li><a href="#">Orine</a></li>
-							<li><a href="#">Hepático</a></li>
+<div class=\"dropdown\"><button class=\"btn btn-default dropdown-toggle\" type=\"button\" data-toggle=\"dropdown\">Examenes
+						<span class=\"caret\"></span></button>
+						<ul class=\"dropdown-menu\">
+							<li><a href=\"#\">Sangre</a></li>
+							<li><a href=\"#\">Orine</a></li>
+							<li><a href=\"#\">Hepático</a></li>
 							</ul>
 						</div>
 						*/
