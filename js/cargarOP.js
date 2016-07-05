@@ -37,6 +37,7 @@ $(document).ready( function cargarDatos(){
 				
 			}
 		};
+	
 	xhttp.open("GET","json/datosOperario.json", true);
 	xhttp.send();
 });
