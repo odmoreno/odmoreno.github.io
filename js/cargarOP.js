@@ -23,7 +23,7 @@ $(document).ready( function cargarDatos(){
 					
 					var examenes=dato.examenes
 					td4.innerHTML="<div class=\"dropdown\"><button class=\"btn btn-default dropdown-toggle\" type=\"button\" data-toggle=\"dropdown\">Examenes <span class=\"caret\"></span></button><ul class=\"dropdown-menu\">"
-					var dd=document.createElement("ul")
+					var dd=document.createElement("ul");
 					dd.className="dropdown-menu"
 					examenes.forEach(function(examen){
 						var li= document.createElement("li");
