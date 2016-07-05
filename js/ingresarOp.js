@@ -26,4 +26,55 @@ $(document).ready(function() {
 		document.getElementById(id2show).style.visibility='visible';
 		
 	});
+	 $('#opcion3 a').click(function(event) {
+		$('#datosOperario').load('estadisticas.html');
+		var circle = d3.selectAll("circle")
+		var xhttp= new XMLHttpRequest();
+		xhttp.onreadystatechange = function(){
+			if (xhttp.readyState == 4 && xhttp.status == 200){
+				var contHeces=0;
+				var contSangre=0;
+				var contHepa=0;
+				var contOrin=0;
+				var json = JSON.parse(xhttp.responseText);
+				json.forEach(function(dato){
+					var examenes=dato.examenes;
+					examenes.forEach(function(examen){
+						if (examen=="Heces"){
+							contHeces++;
+						}
+						else if (examen=="Sangre"){
+							contSangre++;
+						}
+						else if (examen=="Orine"){
+							contOrin++;
+						}
+						else if (examen=="Hepatico"){
+							contHepa++;
+						}
+						
+					});
+					
+				});
+				
+			}
+		}
+		xhttp.open("GET","json/datosOperario.json", true);
+		xhttp.send();
+		circle.data([contHeces, contSangre, contOrin, contHepa])
+		circle.attr("r", function(d) { return Math.sqrt(d); });
+		d3.selectAll("p").style("color", function(d, i) {
+		return i % 2 ? "#fff" : "#eee";
+		});
+		d3.selectAll("circle").transition()
+		.duration(750)
+		.delay(function(d, i) { return i * 10; })
+		.attr("r", function(d) { return Math.sqrt(d * scale); });
+		
+	 });
+	
 });
+function borrarRegistro(){
+
+	
+}
