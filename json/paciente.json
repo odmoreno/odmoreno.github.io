@@ -1,0 +1,13 @@
+[
+	 {
+	 	"primerNombre": "Oscar",
+		"segundoNombre": "Daniel",
+		"primerApellido": "Moreno",
+		"segundoApellido": "Abad",
+		"direccion": "Alborada 8na etapa maz 937 villa 1",
+	 	"telefono": "0939181841",
+	 	"cedula": "0931245229",
+	 	"email": "oscarmoreno@gmail.com",
+	 	"imagen" : " images/person.png"
+	 }
+ ]

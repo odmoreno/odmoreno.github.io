@@ -1,0 +1,26 @@
+[
+	 {
+	 	"codigo": 0,
+	 	"short": "CM1",
+		"nombre": "Centro médico 1",
+		"direccion": "avenida 1 calle 1",
+		"descripcion": "centro medico numero 1",
+		"horarios": ["14:00","20:00","22:00"]
+	 },
+	 {
+	 	"codigo": 1,
+	 	"short": "CM2",
+		"nombre": "Centro médico 2",
+		"direccion": "avenida 2 calle 2",
+		"descripcion": "centro medico numero 2",
+		"horarios": ["12:00","18:00","21:00"]
+	 },
+	 {
+	 	"codigo": 2,
+	 	"short": "CM3",
+		"nombre": "Centro médico 3",
+		"direccion": "avenida 3 calle 3",
+		"descripcion": "centro medico numero 3",
+		"horarios": ["10:00","15:00","18:00"]
+	 }
+ ]
