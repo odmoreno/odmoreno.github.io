@@ -24,7 +24,7 @@ $(document).ready( function cargarDatos(){
 					var examenes=dato.examenes
 					
 					var dd=document.createElement("ul");
-					dd.className="dropdown-menu"
+					
 					examenes.forEach(function(examen){
 						var li= document.createElement("li");
 						
