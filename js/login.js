@@ -14,26 +14,20 @@ function validarLogin(){
 	var password = $('#inputPassword').val();
 	console.log(password);
 
-	if( email == emailvalido[0] || email == emailvalido[1] || email == emailvalido[2] && password == passvalida){
+	if( email == emailvalido[0] | && password == passvalida){
 		console.log("cuenta  valida");
 		//$(document).load('paciente.html');
-		switch (email){
-			case emailvalido[0]:
-				window.open('paciente.html');
-				//window.location.href = "odmoreno.github.io/paciente.html";
-				break;
-			case emailvalido[1]:
-				window.open('operario.html');
+			window.open('paciente.html');
+	else if( email == emailvalido[1]  && password == passvalida){
+			window.open('operario.html');
 				//window.location.href = "odmoreno.github.io/operario.html"
-				break;
-			case emailvalido[2]:
-				window.open('laboratorista.html');
-				//window.location.href = "odmoreno.github.io/laboratorista.html"
-				break;
-			
-		//
-		//$('.container').load('paciente.html');
-		}
+	}
+	else if( email == emailvalido[2]  && password == passvalida){	
+			window.open('laboratorista.html');
+			//window.location.href = "odmoreno.github.io/laboratorista.html"
+	}//
+	
+
 	}
 	else{
 		$("#ingresoSesion").effect("shake");
