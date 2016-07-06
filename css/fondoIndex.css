@@ -2,8 +2,12 @@ body{
 		background-image: url('/images/principalbgpeq.jpg');
 		background-size: 100% 100%;
 }
-.container{
+#informacion{
 	background-color: rgba(0, 0, 0, 0.05);
+}
+#cont1{
+	background-color: rgba(0, 0, 0, 0.05);
+	
 }
 .nav{
 	background-color: rgba(255, 255, 255, 0.5);
