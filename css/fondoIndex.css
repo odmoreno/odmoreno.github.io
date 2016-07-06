@@ -2,7 +2,7 @@ body{
 		background-image: url('/images/principalbgpeq.jpg');
 		background-size: 100% 100%;
 }
-#informacion{
+.infologin{
 	background-color: rgba(0, 0, 0, 0.05);
 }
 #cont1{
