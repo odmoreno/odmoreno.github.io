@@ -27,10 +27,10 @@ $(document).ready( function cargarDatos(){
 					dd.className="dropdown-menu"
 					examenes.forEach(function(examen){
 						var li= document.createElement("li");
-						var a=document.createElement("a");
-						a.href="#";
-						a.textContent=examen;
-						li.appendChild(a);
+						
+						
+						li.textContent=examen;
+						
 						dd.appendChild(li);
 						
 					});
