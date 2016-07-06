@@ -1,36 +1,62 @@
+function writeAddressName(latLng) {
+        var geocoder = new google.maps.Geocoder();
+        geocoder.geocode({
+          "location": latLng
+        },
+        function(results, status) {
+          //if (status == google.maps.GeocoderStatus.OK)
+            //document.getElementById("address").innerHTML = results[0].formatted_address;
+          //else
+            //document.getElementById("error").innerHTML += "Unable to retrieve your address" + "<br />";
+        });
+      }
 
-var url = " https://www.googleapis.com/geolocation/v1/geolocate?key=YOUR_API_KEY" + "AIzaSyCVjhwhIxKfjUuKZkEgl2aaOsbWwBACyzk";
+      function geolocationSuccess(position) {
+        var userLatLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+        // Write the formatted address
+        writeAddressName(userLatLng);
 
-function initMap() {
-  var map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: -34.397, lng: 150.644},
-    zoom: 6
-  });
-  var infoWindow = new google.maps.InfoWindow({map: map});
+        var myOptions = {
+          zoom : 16,
+          center : userLatLng,
+          mapTypeId : google.maps.MapTypeId.ROADMAP
+        };
+        // Draw the map
+        var mapObject = new google.maps.Map(document.getElementById("map"), myOptions);
+        // Place the marker
+        new google.maps.Marker({
+          map: mapObject,
+          position: userLatLng
+        });
+        // Draw a circle around the user position to have an idea of the current localization accuracy
+        var circle = new google.maps.Circle({
+          center: userLatLng,
+          radius: position.coords.accuracy,
+          map: mapObject,
+          fillColor: '#0000FF',
+          fillOpacity: 0.5,
+          strokeColor: '#0000FF',
+          strokeOpacity: 1.0
+        });
+        mapObject.fitBounds(circle.getBounds());
+      }
 
-  // Try HTML5 geolocation.
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function(position) {
-      var pos = {
-        lat: position.coords.latitude,
-        lng: position.coords.longitude
-      };
+      function geolocationError(positionError) {
+        document.getElementById("error").innerHTML += "Error: " + positionError.message + "<br />";
+      }
 
-      infoWindow.setPosition(pos);
-      infoWindow.setContent('Location found.');
-      map.setCenter(pos);
-    }, function() {
-      handleLocationError(true, infoWindow, map.getCenter());
-    });
-  } else {
-    // Browser doesn't support Geolocation
-    handleLocationError(false, infoWindow, map.getCenter());
-  }
-}
+      function geolocateUser() {
+        // If the browser supports the Geolocation API
+        if (navigator.geolocation)
+        {
+          var positionOptions = {
+            enableHighAccuracy: true,
+            timeout: 10 * 1000 // 10 seconds
+          };
+          navigator.geolocation.getCurrentPosition(geolocationSuccess, geolocationError, positionOptions);
+        }
+        else
+          document.getElementById("error").innerHTML += "Your browser doesn't support the Geolocation API";
+      }
 
-function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-  infoWindow.setPosition(pos);
-  infoWindow.setContent(browserHasGeolocation ?
-                        'Error: The Geolocation service failed.' :
-                        'Error: Your browser doesn\'t support geolocation.');
-}
+      window.onload = geolocateUser;
