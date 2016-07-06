@@ -1,4 +1,4 @@
-var emailvalido="oscarmoreno@gmail.com";
+var emailvalido=["oscarmoreno@gmail.com","cmanosalvas95@gmail.com", "lab@gmail.com"];
 var passvalida= "daw123";
 
 alert = function(){}
@@ -14,13 +14,26 @@ function validarLogin(){
 	var password = $('#inputPassword').val();
 	console.log(password);
 
-	if( email == emailvalido && password == passvalida){
+	if( email == emailvalido[0] || email == emailvalido[1] || email == emailvalido[2] && password == passvalida){
 		console.log("cuenta  valida");
 		//$(document).load('paciente.html');
-		window.open('paciente.html');
+		switch (email){
+			case emailvalido[0]:
+				//window.open('paciente.html');
+				window.location.href = "odmoreno.github.io/paciente.html";
+				break;
+			case emailvalido[1]:
+				//window.open('operario.html');
+				window.location.href = "odmoreno.github.io/operario.html"
+				break;
+			case emailvalido[2]:
+				//window.open('laboratorista.html');
+				window.location.href = "odmoreno.github.io/laboratorista.html"
+				break;
+			
 		//
 		//$('.container').load('paciente.html');
-
+		}
 	}
 	else{
 		$("#ingresoSesion").effect("shake");
