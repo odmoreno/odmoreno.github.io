@@ -9,3 +9,9 @@ body{
 		background-size: 100% 100%;
 		}
 }
+.container{
+	background-color: rgba(0, 0, 0, 0.05);
+}
+.nav{
+	background-color: rgba(255, 255, 255, 0.5);
+}
