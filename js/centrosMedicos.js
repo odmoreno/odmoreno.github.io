@@ -5,7 +5,7 @@ $(document).ready( function cargarDatos(){
 			if (xhttp.readyState == 4 && xhttp.status == 200){
 				
 				var i;
-				var tabla=document.getElementById("tableBody");
+				var table=document.getElementById("tableBody");
 				var json = JSON.parse(xhttp.responseText);
 				
 				json.forEach(function(dato){
@@ -14,17 +14,14 @@ $(document).ready( function cargarDatos(){
 					var td2= document.createElement("td");
 					var td3= document.createElement("td");
 					var td4= document.createElement("td");
-					var td5= document.createElement("td");
 					
-					td1.textContent=dato.numero;
-					td2.textContent=dato.paciente;
-					td3.textContent=dato.centro;
+					td1.textContent=dato.nombre;
+					td2.textContent=dato.direccion;
+					td3.textContent=dato.descripcion;
 					
-					
-					var examenes=dato.examenes;
-					
+					var examenes=dato.horarios;
+
 					var dd=document.createElement("ul");
-					
 					examenes.forEach(function(examen){
 						var li= document.createElement("li");
 						
@@ -34,33 +31,22 @@ $(document).ready( function cargarDatos(){
 						dd.appendChild(li);
 						
 					});
+
 					/*td4.textContent=dato.examenes;*/
 					
 					td4.appendChild(dd);
-					td5.textContent=dato.lab;
 				
 					tr.appendChild(td1);
 					tr.appendChild(td2);
 					tr.appendChild(td3);
 					tr.appendChild(td4);
-					tr.appendChild(td5);
+
 				
-					tabla.appendChild(tr);
+					table.appendChild(tr);
 				});
 				
 			}
 		};
-	xhttp.open("GET","json/datosOperario.json", true);
+	xhttp.open("GET","json/centros.json", true);
 	xhttp.send();
 });
-
-/*
-<div class=\"dropdown\"><button class=\"btn btn-default dropdown-toggle\" type=\"button\" data-toggle=\"dropdown\">Examenes
-						<span class=\"caret\"></span></button>
-						<ul class=\"dropdown-menu\">
-							<li><a href=\"#\">Sangre</a></li>
-							<li><a href=\"#\">Orine</a></li>
-							<li><a href=\"#\">Hepático</a></li>
-							</ul>
-						</div>
-						*/
