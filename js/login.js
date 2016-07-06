@@ -29,7 +29,7 @@ function validarLogin(){
 	}//
 	
 
-	}
+	
 	else{
 		$("#ingresoSesion").effect("shake");
 		$('#id').on('click', function(){
