@@ -19,16 +19,16 @@ function validarLogin(){
 		//$(document).load('paciente.html');
 		switch (email){
 			case emailvalido[0]:
-				//window.open('paciente.html');
-				window.location.href = "odmoreno.github.io/paciente.html";
+				window.open('paciente.html');
+				//window.location.href = "odmoreno.github.io/paciente.html";
 				break;
 			case emailvalido[1]:
-				//window.open('operario.html');
-				window.location.href = "odmoreno.github.io/operario.html"
+				window.open('operario.html');
+				//window.location.href = "odmoreno.github.io/operario.html"
 				break;
 			case emailvalido[2]:
-				//window.open('laboratorista.html');
-				window.location.href = "odmoreno.github.io/laboratorista.html"
+				window.open('laboratorista.html');
+				//window.location.href = "odmoreno.github.io/laboratorista.html"
 				break;
 			
 		//
