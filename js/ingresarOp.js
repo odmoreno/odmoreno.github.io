@@ -59,15 +59,9 @@ $(document).ready(function() {
 					});
 					
 				});
-				circle.data([contHeces, contSangre, contOrin, contHepa])
-				circle.attr("r", function(d) { return Math.sqrt(d); });
-				d3.selectAll("p").style("color", function(d, i) {
-					return i % 2 ? "#fff" : "#eee";
+				
 					});
-				d3.selectAll("circle").transition()
-				.duration(750)
-				.delay(function(d, i) { return i * 10; })
-				.attr("r", function(d) { return Math.sqrt(d * 10); });
+				
 				
 				
 			}
@@ -79,10 +73,7 @@ $(document).ready(function() {
 			d3.selectAll("p").style("color", function(d, i) {
 				return i % 2 ? "#fff" : "#eee";
 			});
-		d3.selectAll("circle").transition()
-		.duration(750)
-		.delay(function(d, i) { return i * 10; })
-		.attr("r", function(d) { return Math.sqrt(d * scale); });
+		
 		
 	 });
 	
