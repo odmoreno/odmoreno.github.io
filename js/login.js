@@ -18,6 +18,7 @@ function validarLogin(){
 		console.log("cuenta  valida");
 		//$(document).load('paciente.html');
 			window.open('paciente.html');
+	}
 	else if( email == emailvalido[1] && password == passvalida){
 			window.open('operario.html');
 				//window.location.href = "odmoreno.github.io/operario.html"
