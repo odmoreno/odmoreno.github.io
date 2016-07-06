@@ -40,6 +40,7 @@ $(document).ready(function() {
 				console.log("entro");
 				var json = JSON.parse(xhttp.responseText);
 				json.forEach(function(dato){
+					console.log(dato);
 					var examenes=dato.examenes;
 					examenes.forEach(function(examen){
 						if (examen=="Heces"){
