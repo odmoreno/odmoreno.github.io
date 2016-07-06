@@ -8,7 +8,6 @@
 body{
 	font-family: 'Tillana', serif;
 	font-size: 32 px;
-	color: "white";
 	background: url('/images/bond.png') left top no-repeat, url('/images/background.jpg') no-repeat;
     background-size: 200px, 100% 100%;
 }
