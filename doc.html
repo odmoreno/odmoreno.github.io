@@ -1,0 +1,62 @@
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse:collapse;
+}
+th, td {
+  padding: 5px;
+}
+</style>
+</head>
+<body>
+
+<p>Esto es una prueba</p>
+
+
+<button type="button" onclick="loadXMLDoc()">Get my CD collection</button>
+<br><br>
+
+<table id="demo"></table>
+
+<script>
+function loadXMLDoc() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      escritor = myFunction(this);
+    }
+  };
+  xmlhttp.open("GET", "escritores.xml", true);
+  xmlhttp.send();
+}
+function myFunction(xml) {
+  var i;
+  var xmlDoc = xml.responseXML;
+  var x = xmlDoc.getElementsByTagName("CD");
+
+  var escritores = []
+
+  for (i = 0; i <x.length; i++) { 
+    var artist = {
+      id:"",
+      name:""
+    }
+    _id = x[i].getElementsByTagName("id")[0].childNodes[0].nodeValue
+    _name= x[i].getElementsByTagName("nombre")[0].childNodes[0].nodeValue
+
+    artist.id = _id
+    artist.name = _name
+    console.log(artist)
+    escritores.push(artist);
+    console.log(escritores)
+
+  }
+  return escritores
+  console.log(escritores)
+}
+</script>
+
+</body>
+</html>
