@@ -27,9 +27,10 @@ th, td {
 <script>
 function loadXMLDoc() {
   var xmlhttp = new XMLHttpRequest();
+  var escritores = []
   xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      escritor = myFunction(this);
+      escritores = myFunction(this);
     }
   };
   xmlhttp.open("GET", "escritores.xml", true);
@@ -63,6 +64,10 @@ function myFunction(xml) {
   console.log(escritores)
   return escritores
 }
+</script>
+
+<script>
+
 </script>
 
 </body>
